@@ -1,14 +1,12 @@
-var http = require("http");
+var http = require('http');
 
-function process_request(req, res) {
-  var body = 'Thanks for calling!\n';
-  var content_length = body.length;
-  res.writeHead(200, {
-    'Content-Length': content_length,
-    'Content-Type': 'text/plain'
-  });
-  res.end(body);
+function handle_incoming_request(req, res) {
+  console.log("INCOMING REQUEST: " + req.method + " " + req.url);
+  res.writeHead(200, { "Content-Type" : "application/json" });
+  res.end(JSON.stringify( { error: null }) + "\n");
 }
 
-var s = http.createServer(process_request);
-s.listen(3000);
+
+var server = http.createServer(handle_incoming_request);
+
+server.listen(3000);
