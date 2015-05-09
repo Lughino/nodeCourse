@@ -1,0 +1,24 @@
+// lista dei comandi di npm
+npm help
+
+// comando per installare un pacchetto
+npm install <nome_modulo>
+
+// con l'opzione "-g" si installa il pacchetto globalmente
+npm install -g <mode_modulo>
+
+// i moduli vengono installati nella cartella "node_modules" del progetto
+// se i moduli che si installano esternamente hanno delle dipendenze, esse verranno
+// risolte nella cartella "node_modules" del modulo esterno
+
+// per cercare un modulo
+npm search <nome_modulo>
+
+// lista di pacchetti installati
+npm ls
+
+// per aggiornare un modulo, o tutti i moduli presenti nel progetto
+npm update <nome_modulo>
+
+// comando di inizializzazione del package.json
+npm init
