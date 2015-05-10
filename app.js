@@ -18,9 +18,7 @@ var Datastore = require('nedb');
 var db = {};
 db.products = new Datastore({ filename: './data/products.db', autoload: true });
 db.users = new Datastore({ filename: './data/users.db', autoload: true });
-db.orders = new Datastore({ filename: './data/orders.db', autoload: true });
 db.categories = new Datastore({ filename: './data/categories.db', autoload: true });
-db.cart = new Datastore({ filename: './data/cart.db', autoload: true });
 
 global.db = db;
 
