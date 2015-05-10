@@ -35,11 +35,11 @@
     <div class="container">
         <h1 class="page-title pull-left">index shopping</h1>
         <ol class="breadcrumb pull-right">
-            <% if (!member) { %>
+            <% if (!user) { %>
             <li><a href="/signup">signup</a></li>
             <li><a href="/reg">registration</a></li>
             <% } else { %>
-            <li><%=member.name%><li>
+            <li><%=user.name%><li>
             <li><a href="/logout">Logout</a></li>
             <% } %>
         </ol>

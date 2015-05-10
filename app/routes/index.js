@@ -1,5 +1,11 @@
 var controller = function(req, res) {
-    res.render('index', {'title' : 'Course Node Shop'});
+  // inserire il caricamento dei prodotti.
+
+  res.render('index', {
+    'title': 'Course Node Shop',
+    'user': req.user,
+    'products': []
+  });
 };
 
 module.exports = controller;
